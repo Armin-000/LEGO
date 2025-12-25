@@ -66,6 +66,3 @@ No build tools or backend are required.
 ├─ LICENSE
 └─ README.md
 ```
-
-```
-
