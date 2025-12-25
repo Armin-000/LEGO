@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO ETERNITY v20.10</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="loader">LEGO V20.10</div>
+
+    <div id="ui-layer">
+        <div class="sidebar ui-element">
+            <div class="brand">ETERNITY <span style="color:var(--accent)">v20.10</span></div>
+            
+            <div id="ui-sections">
+                <div class="section-container" data-cat="bricks">
+                    <div class="section-title">Standard Bricks</div>
+                    <div class="grid-parts" id="bricks-list"></div>
+                </div>
+
+                <div class="section-container" data-cat="plates">
+                    <div class="section-title">Plates</div>
+                    <div class="grid-parts" id="plates-list"></div>
+                </div>
+
+                <div class="section-container" data-cat="slopes">
+                    <div class="section-title">Roofs / Slopes</div>
+                    <div class="grid-parts" id="slopes-list"></div>
+                </div>
+
+                <div class="section-container" data-cat="special">
+                    <div class="section-title">Special Parts</div>
+                    <div class="grid-parts" id="special-list"></div>
+                </div>
+
+                <div class="section-container" data-cat="nature">
+                    <div class="section-title">Nature / Plants (Prefabs)</div>
+                    <div class="grid-parts" id="nature-list"></div>
+                </div>
+
+                <div class="section-container" data-cat="colors">
+                    <div class="section-title">Colors (Palette)</div>
+                    <div class="grid-colors" id="color-list"></div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="action-btn" onclick="app.undo()">↩ Undo (Ctrl+Z)</button>
+                <button class="action-btn" onclick="app.save()">💾 Save</button>
+                <button class="action-btn danger" onclick="app.clear()">🗑 Clear All</button>
+            </div>
+        </div>
+
+        <div class="status-bar ui-element">
+            <span><span class="key">L-Click</span>Place</span>
+            <span><span class="key">Shift+Click</span>Remove</span>
+            <span><span class="key">R</span>Rotate</span>
+            <span id="stats">Objects: 0</span>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
